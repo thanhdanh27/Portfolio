@@ -74,7 +74,7 @@ body {
     height: 100vh;
     padding: 0px 10%;
     position: relative;
-    background-image: url(../assets/wallpaperflare.com_wallpaper.jpg);
+    background-image: url(./wallpaperflare.com_wallpaper.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
