@@ -11,6 +11,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 
 .header {
     position: fixed;
-    /* background-color: yellowgreen; */
+    transition: 0.3s;
     top: 0;
     left: 0;
     right: 0;
@@ -28,7 +29,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
+    z-index: 10;
+}
+
+.header.sticky {
+    background-color: #081b29
 }
 
 .header__logo {
@@ -54,6 +59,7 @@ body {
 .header__logo:hover {
     color: transparent;
 }
+
 
 .navbar__item {
     text-decoration: none;
@@ -201,4 +207,356 @@ body {
 
 .home__social-link:hover::before {
     width: 100%;
+}
+
+.about {
+    background-color: #112e42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    /* height: 100vh; */
+    padding-bottom: 10rem;
+
+}
+
+.about__heading {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+.about__img {
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
+}
+
+.about__img img {
+    width: 85%;
+    border-radius: 50%;
+    border: 2px solid #00abf0;
+}
+
+.circle-spin {}
+
+.about__content {
+    text-align: center;
+}
+
+.about__content h3 {
+    font-size: 3rem;
+}
+
+.about__content p {
+    font-size: 1.4rem;
+    margin: 2rem 16rem 1rem;
+
+}
+
+.home__btn.btn {
+    justify-content: center;
+
+}
+
+.education {
+    background-color: #081b29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.education__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+}
+
+.education__col {
+    flex: 1 1 35rem;
+
+}
+
+.education__title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.education__box {
+    margin: 0 80px;
+    border-left: 2px solid #00abf0;
+    padding-left: 2rem;
+}
+
+.education__content {
+    border: 2px solid #00abf0;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    /* overflow: hidden; */
+    z-index: 1;
+}
+
+.education__content::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: #00abf0;
+    top: -2px;
+    left: -32px;
+    border-radius: 50%;
+}
+
+
+.content::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #112e42;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.content:hover::before {
+    width: 100%;
+    overflow: hidden;
+}
+
+.education__icon {
+    font-size: 1.5rem;
+    color: #00abf0;
+    padding-bottom: 0.5rem;
+}
+
+.education__icon i {
+    padding-right: 5px;
+}
+
+.education__content h3 {
+    font-size: 2rem;
+}
+
+.education__content p {
+    font-size: 1.4rem;
+    padding-top: 0.5rem;
+}
+
+.skill {
+    background-color: #112e42;
+    padding-bottom: 8rem;
+    min-height: auto;
+}
+
+.skill .about__heading {
+    display: block;
+    margin: 0;
+    padding-top: 100px;
+}
+
+.skill .skill__row {
+    padding-left: 10%;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.skill__col {
+    flex: 1 1 40rem;
+}
+
+.skill__col .title {
+    font-size: 2.5rem;
+    margin: 10px 0 1.5rem 0;
+}
+
+/* .progress span {
+    color: #00abf0;
+} */
+
+.progress {
+    padding: 1rem 0;
+}
+
+.progress h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.skill__content {
+    border: 2px solid #00abf0;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.skill__box {
+    max-width: 450px;
+}
+
+.progress__bar {
+    height: 25px;
+    border: 2px solid #00abf0;
+    border-radius: 6px;
+    margin: 1rem 0;
+    padding: 0.5rem;
+
+}
+
+.progress__bar span {
+    display: block;
+    height: 100%;
+    background-color: #00abf0;
+    border-radius: 3px;
+}
+
+.skill__col:nth-child(1) .progress:nth-child(1) .progress__bar span {
+    width: 90%;
+}
+
+.skill__col:nth-child(1) .progress:nth-child(2) .progress__bar span {
+    width: 80%;
+}
+
+.skill__col:nth-child(1) .progress:nth-child(3) .progress__bar span {
+    width: 40%;
+}
+
+.skill__col:nth-child(2) .progress:nth-child(1) .progress__bar span {
+    width: 95%;
+}
+
+.skill__col:nth-child(2) .progress:nth-child(2) .progress__bar span {
+    width: 80%;
+}
+
+.skill__col:nth-child(2) .progress:nth-child(3) .progress__bar span {
+    width: 85%;
+}
+
+.contact {
+    min-height: auto;
+    padding-bottom: 8rem;
+    background-color: #081b29;
+}
+
+.contact__heading {
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 100px;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact__input-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact__input-field {
+    width: 49%;
+    margin: 1rem 0;
+}
+
+.contact__input-field input,
+.contact__textarea textarea {
+    width: 100%;
+    padding: 1.5rem;
+    background: transparent;
+    font-size: 1.4rem;
+    color: #ededed;
+    border-radius: 6px;
+    border: 2px solid #00abf0;
+    outline: none;
+}
+
+.contact__input-field input::placeholder,
+.contact__textarea textarea::placeholder {
+    color: #ededed;
+}
+
+.contact__textarea {
+    margin-top: 10px;
+}
+
+form .home__btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.home__btn .home__btn-link {
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #112e42;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 9%;
+}
+
+.footer p {
+    font-size: 1.4rem;
+}
+
+.footer__icon a {
+    border-radius: 6px;
+    border: 2px solid #00abf0;
+    background-color: #112e42;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer__icon a::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #00abf0;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.footer__icon i:hover {
+    color: #081b29;
+}
+
+.footer__icon a:hover::before {
+    width: 100%;
+
+}
+
+.footer__icon i {
+    font-size: 2rem;
+    color: #00abf0;
+    transition: 0.5s;
+    padding: 10px;
 }
