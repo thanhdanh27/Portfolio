@@ -14,6 +14,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.main {
+    overflow: hidden;
+}
+
 body {
     /* background-color: #081b29; */
     color: #ededed;
@@ -559,4 +563,124 @@ form .home__btn {
     color: #00abf0;
     transition: 0.5s;
     padding: 10px;
+}
+
+i.fa-solid.fa-bars.mobile-bar {
+    display: none;
+}
+
+@media (max-width:739px) {
+    .header {
+        background-color: #081b29;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 98%;
+        left: 0;
+        background-color: #081b29;
+        width: 100%;
+        padding: 1rem 2%;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        display: none;
+        animation: showBar ease 0.5s;
+    }
+
+    .navbar__list a {
+        display: block;
+    }
+
+    i.fa-solid.fa-bars.mobile-bar {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .home__btn {
+        justify-content: unset;
+    }
+
+    .home__btn-link {
+        width: 120px;
+    }
+
+    .home__btn .home__btn-link:last-child {
+        margin-left: 73px;
+    }
+
+    .home__content {
+        width: 100%;
+    }
+
+    .home__social {
+        width: 160px;
+    }
+
+    .home__social-link {
+        width: 38px;
+    }
+
+    .about__content p {
+        margin: 1rem 1.5rem;
+        /* text-align: left; */
+    }
+
+    .about .home__btn-link:last-child {
+        margin-left: 0;
+    }
+
+    .education__box {
+        margin: 0 30px;
+    }
+
+    .skill .skill__row {
+        padding: 0 2rem;
+    }
+
+    .contact {
+        padding-bottom: 5rem;
+    }
+
+    .contact__input-field {
+        width: 100%;
+    }
+
+    form {
+        padding: 0 2rem;
+    }
+
+    form .home__btn .home__btn-link:last-child {
+        margin-left: 0;
+    }
+
+    .footer__icon a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer__icon i {
+        padding: 5px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer__text {
+        padding-top: 1rem;
+    }
+
+    @keyframes showBar {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
 }
